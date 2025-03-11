@@ -1,11 +1,3 @@
-import os
-os.system("/home/adminuser/venv/bin/pip install -r requirements.txt")
-
-import sys
-print(sys.path)
-print(sys.modules.get("pysqlite3"))
-
-import pysqlite3
 __import__('pysqlite3')
 sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 import streamlit as st
