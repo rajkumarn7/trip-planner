@@ -1,6 +1,5 @@
 import os
-os.environ["PATH"] += os.pathsep + os.path.expanduser("~/.local/bin")
-os.system("pip install -r requirements.txt")
+os.system("/home/adminuser/venv/bin/pip install -r requirements.txt")
 
 import sys
 print(sys.path)
