@@ -2,6 +2,10 @@ import os
 os.environ["PATH"] += os.pathsep + os.path.expanduser("~/.local/bin")
 os.system("pip install -r requirements.txt")
 
+print(sys.path)
+print(sys.modules.get("pysqlite3"))
+
+import pysqlite3
 __import__('pysqlite3')
 import sys
 sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
